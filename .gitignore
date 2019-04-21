@@ -102,3 +102,14 @@ venv.bak/
 
 # mypy
 .mypy_cache/
+
+resources/sources/images/*
+!.gitkeep
+resources/sources/movies/*
+!.gitkeep
+resources/dataset/faces/*
+!.gitkeep
+resources/conf/cv2-cascade-conf/*
+!.gitkeep
+.vscode
+*.DS_Store
