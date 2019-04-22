@@ -113,3 +113,4 @@ resources/conf/cv2-cascade-conf/*
 !.gitkeep
 .vscode
 *.DS_Store
+Pipfile.lock
