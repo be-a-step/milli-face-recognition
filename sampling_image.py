@@ -5,7 +5,7 @@ import os
 
 def sampling_from_movies(source: str, dist: str, sampling_rate: int):
     path = Path(source)
-    for filePath in path.glob('**/*'):
+    for filePath in path.glob('**' + os.sep + '*'):
         sampling(filePath, str(
             filePath.parent).replace(str(path), dist), sampling_rate)
 
@@ -24,8 +24,8 @@ def sampling(path: Path, dist: str, sampling_rate: int):
     prefix = os.path.splitext(path.name)[0]
     cap = cv2.VideoCapture(str(path))
     while cap.isOpened():
+        ret, frame = cap.read()
         if frame_count % sampling_rate is 0:
-            ret, frame = cap.read()
             if ret is True:
                 cv2.imwrite(Path(dist).joinpath(
                     prefix + "_{:0=5}".format(num) + ".png").as_posix(), frame)
