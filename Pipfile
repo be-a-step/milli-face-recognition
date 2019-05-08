@@ -4,11 +4,23 @@ url = "https://pypi.org/simple"
 verify_ssl = true
 
 [dev-packages]
+autopep8 = "*"
+flake8 = "*"
+rope = "*"
 
 [packages]
-autopep8 = "*"
 opencv-python = "*"
 pillow = "*"
+numpy = "*"
 
 [requires]
 python_version = "3.7"
+
+[scripts]
+preptorch1 = "pip3 install https://download.pytorch.org/whl/cu100/torch-1.1.0-cp37-cp37m-win_amd64.whl"
+preptorch2 = "pip3 install torchvision"
+all = "python main.py all"
+create_dataset = "python main.py create_dataset"
+sampling = "python main.py sampling"
+triming = "python main.py triming"
+train = "python main.py train"

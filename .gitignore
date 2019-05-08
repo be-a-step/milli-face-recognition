@@ -114,3 +114,5 @@ resources/conf/cv2-cascade-conf/*
 .vscode
 *.DS_Store
 Pipfile.lock
+triming_cache
+sampling_cache
